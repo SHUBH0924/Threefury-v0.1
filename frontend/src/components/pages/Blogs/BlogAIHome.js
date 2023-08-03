@@ -12,7 +12,10 @@ import {useNavigate } from 'react-router-dom';
 
 function BlogAIHome() {
     const navigate = useNavigate();
-    const handleClick = () => navigate('/blogAI');
+    const handleClickAI = () => navigate('/blogAI');
+    const handleClickMicroservice = () => navigate('/microservices');
+    const handleClickChandrayaan = () => navigate('/chandrayaan');
+
   return (
     <>
         <section className="bg-light" id="blog">
@@ -47,7 +50,7 @@ function BlogAIHome() {
                             <img alt="image" className="author-img bg-blue" src={ava}/>
                             <h5 className="author-name">Hena Sword</h5>
                         </a>
-                        <button onClick={handleClick}> Learn more </button>
+                        <button onClick={handleClickAI}> Learn more </button>
                     </div>
                 </div>
             </div>
@@ -57,12 +60,13 @@ function BlogAIHome() {
                     <img alt="image" className="news-img" src={image2} />
                     <div className="news-text-box">
                         <span className="date main-color">October 29, 2020</span>
-                        <a href="agency/blog-list.html"><h4 className="news-title">Top 10 Microservices Design</h4></a>
+                        <h4 className="news-title">Top 10 Microservices Design</h4>
                         <p className="para">The developers should know what Microservice is and why the Microservice architecture arises...</p>
                         <a className="author d-flex align-items-center" href="javascript:void(0);">
                             <img alt="image" className="author-img bg-purple" src={ava1}/>
                             <h5 className="author-name">David Villas</h5>
                         </a>
+                        <button onClick={handleClickMicroservice}> Learn more </button>
                     </div>
                 </div>
             </div>
@@ -72,12 +76,13 @@ function BlogAIHome() {
                     <img alt="image" className="news-img" src={image3}/>
                     <div className="news-text-box">
                         <span className="date main-color">October 29, 2020</span>
-                        <a href="javascript:void(0);"><h4 className="news-title">Chandrayaan 3 Mission (LVM3-M4)</h4></a>
+                        <h4 className="news-title">Chandrayaan 3 Mission</h4>
                         <p className="para">Chandrayaan-3, India’s third lunar exploration mission was launched on Friday, in the fourth...</p>
                         <a className="author d-flex align-items-center" href="javascript:void(0);">
                             <img alt="image" className="author-img bg-pink" src={ava2}/>
                             <h5 className="author-name">Jhon Walker</h5>
                         </a>
+                        <button onClick={handleClickChandrayaan}> Learn more </button>
                     </div>
                 </div>
             </div>
