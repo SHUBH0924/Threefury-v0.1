@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navigation from '../navbar';
+import Navbar from '../navbar';
 import 'bootstrap/dist/css/bootstrap.css';
 import icon from '../../assets/contact-us-customer-support-concept-vector_prev_ui.png';
 
@@ -9,7 +9,7 @@ function home() {
   return (
     <>
       <div>
-       <Navigation /> 
+       <Navbar/> 
       </div>
       <div class="content" >
     
@@ -21,7 +21,7 @@ function home() {
           <div class="row justify-content-center">
             <div class="col-md-6">
               
-              <p><img src={icon} alt="Image" class="img-fluid"/></p>
+              <p><img src={icon} alt="Image" class="img-fluid "/></p>
 
 
             </div>

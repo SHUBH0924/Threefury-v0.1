@@ -1,6 +1,6 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
-import logo from '../assets/logo.png';
+import logo from '../assets/logoF.png';
 import 'font-awesome/css/font-awesome.min.css';
 
 
@@ -8,13 +8,10 @@ import 'font-awesome/css/font-awesome.min.css';
 function navbar() {
   return (
     
-
-
-<nav className="navbar navbar-expand-lg navbar-dark static-top  navbar-dark navbar-fixed-top">
+    <div className='container '>
+        <nav className="navbar navbar-expand-lg fixed-top style-sec">
   <div className="container">
-    <a className="navbar-brand" href="#">
-      <img src={logo} alt="..." height="100"/>
-    </a>
+    <img src={logo} className='me-auto logo-img' alt="ThreeFury" />
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -41,6 +38,7 @@ function navbar() {
     </div>
   </div>
 </nav>
+    </div>
   )
 }
 
