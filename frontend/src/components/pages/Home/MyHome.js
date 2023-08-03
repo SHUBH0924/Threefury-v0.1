@@ -6,6 +6,8 @@ import BlogAIHome from "../Blogs/BlogAIHome";
 import AboutUs from "../AboutUs/AboutUs";
 import { faEmber } from "@fortawesome/free-brands-svg-icons";
 import emailjs from "@emailjs/browser";
+import Footer from "../../Footer/Footer"
+import OurProjects from "../../OurProject/OurProject"
 
 function home() {
   const [name, setName] = useState("");
@@ -245,7 +247,9 @@ function home() {
         </div>
       </div>
       {<AboutUs />}
+      {<OurProjects/>}
       {<BlogAIHome />}
+      {<Footer/>}
     </>
   );
 }
