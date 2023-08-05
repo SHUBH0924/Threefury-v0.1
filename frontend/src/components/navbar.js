@@ -13,7 +13,7 @@ function navbar() {
 <nav className="navbar navbar-expand-lg navbar-dark static-top  navbar-dark fixed-top style-sec">
   <div className="container">
     <a className="navbar-brand" href="#">
-      <img className="logo-img" src={logo} alt="..." height="100"/>
+      <img className="logo-img" src={logo} alt="..." height="100" onClick={() => window.location.replace("/#home")}/>
     </a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>

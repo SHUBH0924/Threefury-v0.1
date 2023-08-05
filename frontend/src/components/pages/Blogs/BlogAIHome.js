@@ -23,7 +23,7 @@ function BlogAIHome() {
        {/* <!--Row--> */}
         <div className="row">
             <div className="col-md-12 text-center">
-                <div className="heading-area mx-570 pb-lg-5 mb-5">
+                <div className="heading-area mx-570 pb-lg-5 mb-10">
                     <span className="sub-title">We are Threefury</span>
                     <h2 className="title mb-0">Our <span className="alt-color js-rotating">latest blogs,recent news</span> will
                         keep
@@ -50,7 +50,7 @@ function BlogAIHome() {
                             <img alt="image" className="author-img bg-blue" src={ava}/>
                             <h5 className="author-name">Hena Sword</h5>
                         </a>
-                        <button onClick={handleClickAI}> Learn more </button>
+                        <button className='effect effect-1' onClick={handleClickAI}> Learn more </button>
                     </div>
                 </div>
             </div>
@@ -64,9 +64,9 @@ function BlogAIHome() {
                         <p className="para">The developers should know what Microservice is and why the Microservice architecture arises...</p>
                         <a className="author d-flex align-items-center" href="javascript:void(0);">
                             <img alt="image" className="author-img bg-purple" src={ava1}/>
-                            <h5 className="author-name">David Villas</h5>
+                            <h5 className="author-name">Charlotte Kemi</h5>
                         </a>
-                        <button onClick={handleClickMicroservice}> Learn more </button>
+                        <button className='effect effect-1' onClick={handleClickMicroservice}> Learn more </button>
                     </div>
                 </div>
             </div>
@@ -79,10 +79,10 @@ function BlogAIHome() {
                         <h4 className="news-title">Chandrayaan 3 Mission</h4>
                         <p className="para">Chandrayaan-3, India’s third lunar exploration mission was launched on Friday, in the fourth...</p>
                         <a className="author d-flex align-items-center" href="javascript:void(0);">
-                            <img alt="image" className="author-img bg-pink" src={ava2}/>
-                            <h5 className="author-name">Jhon Walker</h5>
+                            <img  alt="image" className="author-img bg-pink" src={ava2}/>
+                            <h5 className="author-name">Emily Villas</h5>
                         </a>
-                        <button onClick={handleClickChandrayaan}> Learn more </button>
+                        <button className='effect effect-1' onClick={handleClickChandrayaan}> Learn more </button>
                     </div>
                 </div>
             </div>

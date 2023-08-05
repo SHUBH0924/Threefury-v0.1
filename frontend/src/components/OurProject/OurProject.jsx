@@ -8,7 +8,7 @@ const OurProject = () => {
     <div className='container'>
         <div className="container col-md-6 lm-3 textS textH">
             <h1 className='textH'>We have <span className='text-color'>developed</span> some <br /> great <span className='text-color'>projects</span></h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae suscipit vel tempore inventore incidunt saepe rerum soluta deserunt dolores..</p>
+            <p>We've proudly crafted innovative projects in web design, leveraging AWS cloud services for scalability and efficiency, while also harnessing the power of Python and C for robust functionality and performance.</p>
         </div>
         <div className='container col-lg-8'>
             <div id="carouselExampleCaptions" className=" carousel slide" data-bs-ride="carousel">

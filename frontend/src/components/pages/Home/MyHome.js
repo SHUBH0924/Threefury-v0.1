@@ -8,6 +8,7 @@ import { faEmber } from "@fortawesome/free-brands-svg-icons";
 import emailjs from "@emailjs/browser";
 import Footer from "../../Footer/Footer"
 import OurProjects from "../../OurProject/OurProject"
+import { text } from "@fortawesome/fontawesome-svg-core";
 
 function home() {
   const [name, setName] = useState("");
@@ -85,6 +86,8 @@ function home() {
           }),
         }
       );
+
+
       const result = await response.json();
       console.log("rrr",result)
       if(result)
@@ -114,7 +117,9 @@ function home() {
               <div class="row justify-content-center">
                 <div class="col-md-6">
                   <p>
-                    <img src={icon} alt="Image" class="img-fluid" />
+                    <h6 className="title-heading"> India's Leading <i><b className="dev-title">Web Design</b></i>, <i><b className="dev-title">Development Company</b></i> and </h6>
+                    <h4 className="title-heading" ><i> <b className="dev-title">Digital Solutions Provider</b></i> </h4>
+                    <img src={icon} alt="Image" class="swing img-fluid ml-6 custom-img" />
                   </p>
                 </div>
                 <div class="col-md-6 mb-10">
@@ -124,11 +129,7 @@ function home() {
         </div> */}
                   {/* <!--Contact Form--> */}
                   <form class="contact-form" id="modal-contact-form-data">
-                    <h3 class="heading mb-4">Let's talk about everything!</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Voluptas debitis, fugit natus?
-                    </p>
+                    <h3 class="heading mb-4">Let's talk about your Business!</h3>
                     <div class="row">
                       {/* <!--Result--> */}
                       <div class="col-12" id="quote_result"></div>

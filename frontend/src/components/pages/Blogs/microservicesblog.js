@@ -169,7 +169,7 @@ We use Jenkins pipelines for automated deployment and also used tools like Terra
                                     <img src={ava} title="" alt=""/>
                                 </div>
                                 <div class="media-body">
-                                    <h6>Hello, I'm<br/> Emily Villas</h6>
+                                    <h6>Hello, I'm<br/> Charlotte Kemi</h6>
                                 </div>
                             </div>
                         </div>

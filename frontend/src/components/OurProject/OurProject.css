@@ -10,3 +10,7 @@
 .text-color{
     color: rgb(228, 95, 58);
 }
+
+.container{
+    margin-bottom: 50px;
+}

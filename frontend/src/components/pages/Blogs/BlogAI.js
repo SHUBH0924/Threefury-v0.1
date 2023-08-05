@@ -1,7 +1,9 @@
 import React from 'react'
 import Navigation from '../../navbar'
 import 'bootstrap/dist/css/bootstrap.css';
-import icon from '../../../assets/OpenAIBlog.png'
+import icon from '../../../assets/AI.jpg'
+import ava from '../../../assets/avatar.jpg'
+import '../Blogs/blogs.css'
 
 
 function BlogAI() {
@@ -18,7 +20,7 @@ function BlogAI() {
                         </div>
                         <div class="article-title">
                             <h2>Open AI vs Software Engineer</h2>
-                            <div class="media">
+                            {/* <div class="media">
                                 <div class="avatar">
                                     <img src="https://bootdey.com/img/Content/avatar/avatar1.png" title="" alt=""/>
                                 </div>
@@ -26,7 +28,7 @@ function BlogAI() {
                                     <label>Rachel Roth</label>
                                     <span>26 FEB 2020</span>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div class="article-content">
                             <p>OpenAI is a research organization that focuses on the development of artificial intelligence, particularly in the areas of natural language processing, computer vision, and reinforcement learning. OpenAI aims to develop AI technology that is safe, beneficial, and accessible to everyone.</p>
@@ -87,28 +89,28 @@ That being said, there are opportunities for software engineers to work at OpenA
                         <div class="widget-body">
                             <div class="media align-items-center">
                                 <div class="avatar">
-                                    <img src="https://bootdey.com/img/Content/avatar/avatar6.png" title="" alt=""/>
+                                    <img src={ava} title="" alt=""/>
                                 </div>
                                 <div class="media-body">
-                                    <h6>Hello, I'm<br/> Rachel Roth</h6>
+                                    <h6>Hello, I'm<br/> Lena Sword</h6>
                                 </div>
                             </div>
-                            <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores</p>
+                            {/* <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores</p> */}
                         </div>
                     </div>
                     {/* <!-- End Author -->
                     <!-- Trending Post --> */}
-                    <div class="widget widget-post">
+                    {/* <div class="widget widget-post">
                         <div class="widget-title">
                             <h3>Trending Now</h3>
                         </div>
                         <div class="widget-body">
 
                         </div>
-                    </div>
+                    </div> */}
                     {/* <!-- End Trending Post -->
                     <!-- Latest Post --> */}
-                    <div class="widget widget-latest-post">
+                    {/* <div class="widget widget-latest-post">
                         <div class="widget-title">
                             <h3>Latest Post</h3>
                         </div>
@@ -174,7 +176,7 @@ That being said, there are opportunities for software engineers to work at OpenA
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     {/* <!-- End Latest Post -->
                     <!-- widget Tags --> */}
                     <div class="widget widget-tags">
