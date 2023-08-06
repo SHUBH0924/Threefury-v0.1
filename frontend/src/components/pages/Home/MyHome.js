@@ -9,8 +9,7 @@ import Footer from "../../Footer/Footer";
 import OurProjects from "../../OurProject/OurProject";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";;
-
-import { text } from "@fortawesome/fontawesome-svg-core";
+//import { text } from "@fortawesome/fontawesome-svg-core";
 
 function home() {
   const [name, setName] = useState("");

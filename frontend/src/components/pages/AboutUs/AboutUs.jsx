@@ -6,7 +6,7 @@ import {
   faCode,
   faCog,
   faEdit,
-  faAndroid,
+  // faAndroid,
   faMagnifyingGlassChart,
   faVideo,
 } from "@fortawesome/free-solid-svg-icons";
@@ -14,11 +14,13 @@ import {
   faTwitter,
   faFacebook,
   faLinkedin, 
-  faGithub
+  faGithub,
+  faAndroid
 } from '@fortawesome/free-brands-svg-icons'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import techyBoy from "../../../assets/techy-boy.avif";
 import Srinj33 from '../../../assets/srinjay.png'
 import { height, width } from '@mui/system';
 import Shub0924 from '../../../assets/Shubhjeet.png'
@@ -36,36 +38,46 @@ function AboutUs() {
   };
   return (
     <>
-      
-      <div id='about'>
-      <section className="pb-0">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6">
-              <span className="sub-title">We are ThreeFury company</span>
-              <h2>We are filling needs of our customers</h2>
-              <p className="para">
-              We listen intently to your aspirations, dissect your challenges, and create tailored strategies that make your brand shine in the digital realm. With each project, we become your trusted partners, pouring creativity, expertise, and ingenuity into every line of code. Elevate your online presence with ThreeFury - where needs are met, visions are realized, and businesses thrive in the digital age.
-              </p>
-              <button onClick={() => window.location.replace("/#modal-contact-form-data")} className="btn btn-hover-1-copy color-1">learn more</button>
-            </div>
-            <div className="col-lg-6">
-              <div className="ms-lg-5 pt-4 mt-lg-0 pt-lg-0">
-                <img
-                  className='swing'
-                  style={{ width: "90%", height: "50%" }}
-                  src="https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg?w=740&t=st=1690874206~exp=1690874806~hmac=0d06b1420f6b3d4b8ac71d43338359ad572a8bc939120fe4fed8b1fd1a6f2caa"
-                />
+      <div id="about">
+        <section className="pb-0">
+          <div className="container">
+            <div className="row d-flex ms-lg-5">
+              <div className="col-lg-6">
+                <span className="sub-title">We are ThreeFury company</span>
+                <h2>We are filling needs of our customers</h2>
+                <p className="para">
+                  We listen intently to your aspirations, dissect your
+                  challenges, and create tailored strategies that make your
+                  brand shine in the digital realm. With each project, we become
+                  your trusted partners, pouring creativity, expertise, and
+                  ingenuity into every line of code. Elevate your online
+                  presence with ThreeFury - where needs are met, visions are
+                  realized, and businesses thrive in the digital age.
+                </p>
+                <button
+                  onClick={() =>
+                    window.location.replace("/#modal-contact-form-data")
+                  }
+                  className="btn btn-hover-1-copy color-1"
+                >
+                  learn more
+                </button>
               </div>
-              
+              <div className="col-lg-6">
+                <div className="ms-lg-5 pt-4 mt-lg-0 pt-lg-0">
+                  <img style={{ width: "90%", height: "50%" }} src={techyBoy} />
+                </div>
+              </div>
             </div>
           </div>
-         </div> 
         </section>
         <section style={{ marginTop: "8rem", marginBottom: "8rem" }}>
           <div className="container">
             <h2>Our services</h2>
-            <p className="para mb-5">We offer various services to our clients which helps their business to grow online.</p>
+            <p className="para mb-5">
+              We offer various services to our clients which helps their
+              business to grow online.
+            </p>
             <div className="row">
               <div className="col-md-3">
                 <div className="process-wrapp">
@@ -185,14 +197,39 @@ function AboutUs() {
           </div>
         </div>
       </section> */}
-      <section style={{marginTop:'8rem',marginBottom:'8rem'}} className='owl-animation'>
-      <OwlCarousel className="owl-theme" {...options}>
-      <div className="item"><img src="image1.jpg" alt="Image 1" /></div>
-      <div className="item"><img src="image2.jpg" alt="Image 2" /></div>
-      <div className="item"><img src="image3.jpg" alt="Image 3" /></div>
-      {/* Add more carousel items as needed */}
-      </OwlCarousel>
-      </section>
+        <section style={{ marginTop: "8rem", marginBottom: "8rem" }}>
+          <div className="container">
+            <div className="row">
+              <div
+                className="col-md-12"
+                style={{
+                  marginLeft: "13%",
+                }}
+              >
+                <OwlCarousel {...options}>
+                  <div className="owlItem">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" />
+                  </div>
+                  <div className="owlItem">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" />
+                  </div>
+                  <div className="owlItem">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg" />
+                  </div>
+                  <div className="owlItem">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" />
+                  </div>
+                  <div className="owlItem">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
+                  </div>
+                  <div className="owlItem">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original-wordmark.svg" />
+                  </div>
+                </OwlCarousel>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
