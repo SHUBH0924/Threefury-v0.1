@@ -5,6 +5,8 @@ import "./App.css";
 import BlogAI from "./components/pages/Blogs/BlogAI";
 import Chandrayaaan from "./components/pages/Blogs/chandryaan"
 import Microservices from "./components/pages/Blogs/microservicesblog"
+import ReactWhatsappButton from "react-whatsapp-button";
+
 function App() {
   return (
     <div className="App">
@@ -14,6 +16,15 @@ function App() {
         <Route path="/chandrayaan" element={<Chandrayaaan />} />
         <Route path="/microservices" element={<Microservices />} />
       </Routes>
+      <ReactWhatsappButton
+        countryCode="91"
+        phoneNumber="8777388386"
+        animated
+        style={{
+          right: "unset",
+          left: "10px",
+      }}
+      />
     </div>
   );
 }

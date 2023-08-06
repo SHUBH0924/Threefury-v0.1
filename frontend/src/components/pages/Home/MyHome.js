@@ -1,13 +1,14 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Navigation from "../../navbar";
 import "bootstrap/dist/css/bootstrap.css";
 import icon from "../../../assets/contact-us-customer-support-concept-vector_prev_ui.png";
 import BlogAIHome from "../Blogs/BlogAIHome";
 import AboutUs from "../AboutUs/AboutUs";
-import { faEmber } from "@fortawesome/free-brands-svg-icons";
 import emailjs from "@emailjs/browser";
-import Footer from "../../Footer/Footer"
+import Footer from "../../Footer/Footer";
 import OurProjects from "../../OurProject/OurProject";
+import "react-phone-number-input/style.css";
+import PhoneInput from "react-phone-number-input";;
 
 import { text } from "@fortawesome/fontawesome-svg-core";
 
@@ -16,133 +17,155 @@ function home() {
   const [email, setEmail] = useState("");
   const [contact, setContact] = useState("");
   const [address, setAddress] = useState("");
-  const [budget, setBudget] = useState("");
+  const [companyName, setCompanyName] = useState("");
   const [message, setMessage] = useState("");
   const [type, setType] = useState("");
   const [loading, setLoading] = useState(false);
+  const [visible, setVisible] = useState(false);
+  const timeout = 3000;
+  const API = process.env.REACT_APP_API;
 
-  useEffect(() => emailjs.init("CY5A1KuW954jeFg5k"), []);
+  useEffect(() => emailjs.init(process.env.REACT_APP_PUBLIC_KEY), []);
+
+  useEffect(() => {
+    if (loading == false && visible === true) {
+      const timer = setTimeout(() => {
+        setVisible(false);
+      }, timeout);
+
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+  }, [loading]);
 
   const handleInput = (e) => {
     if (e.target.name === "quoteName") {
       setName(e.target.value);
-    } else if (e.target.name === "userPhone") {
-      setContact(e.target.value);
     } else if (e.target.name === "projectType") {
       setType(e.target.value);
     } else if (e.target.name === "userEmail") {
       setEmail(e.target.value);
     } else if (e.target.name === "userAddress") {
       setAddress(e.target.value);
-    } else if (e.target.name === "quoteBudget") {
-      setBudget(e.target.value);
+    } else if (e.target.name === "quoteCompanyName") {
+      setCompanyName(e.target.value);
     } else if (e.target.name === "userMessage") {
       setMessage(e.target.value);
     }
   };
 
   const handleSubmit = async () => {
-    const serviceId = "service_exyu2dc";
-    const templateId = "template_ds6ptms";
+    const serviceId = process.env.REACT_APP_SERVICE_ID;
+    const templateId = process.env.REACT_APP_TEMPLATE_ID;
+    const customerTemplateId = process.env.REACT_APP_CUSTOMER_TEMPLATE_ID;
     try {
       setLoading(true);
       await emailjs.send(serviceId, templateId, {
-        Name:name,
-        Email:email,
-        Contact:contact,
-        Address:address,
-        Budget:budget,
-        Message:message,
-        Type:type
+        Name: name,
+        Email: email,
+        Contact: contact,
+        Address: address,
+        Company: companyName,
+        Message: message,
+        Type: type,
       });
-      alert("email successfully sent check inbox");
+      await emailjs.send(serviceId, customerTemplateId, {
+        Name: name,
+        Email: email,
+        Contact: contact,
+        Address: address,
+        Company: companyName,
+        Message: message,
+        Type: type,
+      });
     } catch (error) {
       console.log(error);
     } finally {
       setLoading(false);
+      setVisible(true);
     }
   };
+
   const handleSendMessage = async () => {
     try {
-      if(name===''||budget===''||contact===''||message===''||email===''||address===''||type===''){
-        alert("please fill all fields")
-        return
+      if (
+        name === "" ||
+        contact === "" ||
+        message === "" ||
+        email === "" ||
+        address === "" ||
+        type === ""
+      ) {
+        alert("please fill all fields");
+        return;
       }
-      const response = await fetch(
-        "http://localhost:5000/api/projectDetails/save",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            // 'Content-Type': 'application/x-www-form-urlencoded',
-          },
-          body: JSON.stringify({
-            user_name: name,
-            user_email: email,
-            user_contact: contact,
-            user_address: address,
-            user_type: type,
-            user_budget: budget,
-            user_explaination: message,
-          }),
-        }
-      );
-
-
+      const response = await fetch(`${API}/projectDetails/save`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_name: name,
+          user_email: email,
+          user_contact: contact,
+          user_address: address,
+          user_type: type,
+          user_company: companyName,
+          user_explaination: message,
+        }),
+      });
       const result = await response.json();
-      console.log("rrr",result)
-      if(result)
-      {
-        await handleSubmit()
-        setName('')
-        setAddress('')
-        setBudget('')
-        setContact('')
-        setEmail('')
-        setMessage('')
-        setType('')
+      console.log("rrr", result);
+      if (result) {
+        await handleSubmit();
+
+        setName("");
+        setAddress("");
+        setCompanyName("");
+        setContact("");
+        setEmail("");
+        setMessage("");
+        setType("");
       }
     } catch (error) {
       console.log("Error:", error);
     }
   };
+
   return (
     <>
       <div>
         <Navigation />
       </div>
-      <div id="home" class="content">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-10">
-              <div class="row justify-content-center">
-                <div class="col-md-6">
+      <div id="home" className="content">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-md-10">
+              <div className="row justify-content-center">
+                <div className="col-md-6">
                   <p>
                     <h6 className="title-heading"> India's Leading <i><b className="dev-title">Web Design</b></i>, <i><b className="dev-title">Development Company</b></i> and </h6>
                     <h4 className="title-heading" ><i> <b className="dev-title">Digital Solutions Provider</b></i> </h4>
                     <img src={icon} alt="Image" class="swing img-fluid ml-6 custom-img" />
                   </p>
                 </div>
-                <div class="col-md-6 mb-10">
-                  {/* <div class="heading-area pb-2 mx-570">
-            <span class="sub-title">We are megaone company</span>
-            <h2 class="title mt-2">Lets start your <span class="alt-color js-rotating">project, website</span></h2>
-        </div> */}
+                <div className="col-md-6 mb-10">
                   {/* <!--Contact Form--> */}
                   <form class="contact-form formBox" id="modal-contact-form-data">
                     <h3 class="heading mb-4">Book a free consultation </h3>
                     <p>
                     Let's Talk! Our team of experts is ready to hear your vision and craft a custom solution that elevates your online presence
                     </p>
-                    <div class="row">
+                    <div className="row">
                       {/* <!--Result--> */}
-                      <div class="col-12" id="quote_result"></div>
+                      <div className="col-12" id="quote_result"></div>
 
                       {/* <!--Left Column--> */}
-                      <div class="col-md-6">
-                        <div class="form-group">
+                      <div className="col-md-6">
+                        <div className="form-group">
                           <input
-                            class="form-control"
+                            className="form-control"
                             id="quote_name"
                             name="quoteName"
                             placeholder="Name"
@@ -152,21 +175,22 @@ function home() {
                             onChange={(e) => handleInput(e)}
                           />
                         </div>
-                        <div class="form-group">
-                          <input
-                            class="form-control"
+                        <div className="form-group">
+                          <PhoneInput
+                            style={{ marginTop: "2.8rem" }}
                             id="quote_contact"
                             name="userPhone"
-                            placeholder="Contact"
+                            placeholder="Enter phone number"
                             required=""
                             type="text"
+                            defaultCountry="IN"
                             value={contact}
-                            onChange={(e) => handleInput(e)}
+                            onChange={setContact}
                           />
                         </div>
-                        <div class="form-group">
+                        <div className="form-group">
                           <input
-                            class="form-control"
+                            className="form-control"
                             id="quote_type"
                             name="projectType"
                             placeholder="Project type"
@@ -179,10 +203,10 @@ function home() {
                       </div>
 
                       {/* <!--Right Column--> */}
-                      <div class="col-md-6">
-                        <div class="form-group">
+                      <div className="col-md-6">
+                        <div className="form-group">
                           <input
-                            class="form-control"
+                            className="form-control"
                             id="quote_email"
                             name="userEmail"
                             placeholder="Email"
@@ -192,9 +216,9 @@ function home() {
                             onChange={(e) => handleInput(e)}
                           />
                         </div>
-                        <div class="form-group">
+                        <div className="form-group">
                           <input
-                            class="form-control"
+                            className="form-control"
                             id="quote_address"
                             name="userAddress"
                             placeholder="Address"
@@ -204,25 +228,25 @@ function home() {
                             onChange={(e) => handleInput(e)}
                           />
                         </div>
-                        <div class="form-group">
+                        <div className="form-group">
                           <input
-                            class="form-control"
-                            id="quote_budget"
-                            name="quoteBudget"
-                            placeholder="Budget"
+                            className="form-control"
+                            id="quote_company-name"
+                            name="quoteCompanyName"
+                            placeholder="Company name (optional)"
                             required=""
                             type="text"
-                            value={budget}
+                            value={companyName}
                             onChange={(e) => handleInput(e)}
                           />
                         </div>
                       </div>
 
                       {/* <!--Full Column--> */}
-                      <div class="col-md-12">
-                        <div class="form-group">
+                      <div className="col-md-12">
+                        <div className="form-group">
                           <textarea
-                            class="form-control"
+                            className="form-control"
                             id="quote_message"
                             name="userMessage"
                             placeholder="Please explain your project in detail."
@@ -233,15 +257,29 @@ function home() {
                       </div>
 
                       {/* <!--Button--> */}
-                      <div class="col-md-16">
+                      <div className="col-md-16">
                         <button
                           type="button"
-                          class="btn-hover color-2"
+                          className="btn-hover color-2"
                           onClick={handleSendMessage}
                           disabled={loading}
                         >
+                          {loading && (
+                            <span className="spinner-grow spinner-grow-sm"></span>
+                          )}
                           <span>Send Message</span>
                         </button>
+                        {!loading && visible && (
+                          <div
+                            className={`alert alert-success ${
+                              visible ? "show" : "hide"
+                            }`}
+                            role="alert"
+                          >
+                            Thank you! Your message has been successfully sent.
+                            We will contact you very soon!
+                          </div>
+                        )}
                       </div>
                     </div>
                   </form>
@@ -252,9 +290,9 @@ function home() {
         </div>
       </div>
       {<AboutUs />}
-      {<OurProjects/>}
+      {<OurProjects />}
       {<BlogAIHome />}
-      {<Footer/>}
+      {<Footer />}
     </>
   );
 }
