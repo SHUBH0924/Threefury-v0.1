@@ -41,13 +41,9 @@ function AboutUs() {
               <span className="sub-title">We are ThreeFury company</span>
               <h2>We are filling needs of our customers</h2>
               <p className="para">
-              Threefury is a website design and development company.
-              It is ideal for all kinds of business websites, landing pages, custom websites & eCommerce website development.
-              We have over 3+ years of experience in creating high quality B2B & B2C websites. We build high quality responsive website design within affordable price range.
-              At ThreeFury, we understand that embarking on a website development project can be an exciting yet complex endeavor.
-              That’s why we have streamlined our onboarding process to guide you at every step of your project. By considering a few key aspects and leveraging our expertise, we can help you make informed decisions and create a website that truly reflects your vision and goals.
+              We listen intently to your aspirations, dissect your challenges, and create tailored strategies that make your brand shine in the digital realm. With each project, we become your trusted partners, pouring creativity, expertise, and ingenuity into every line of code. Elevate your online presence with ThreeFury - where needs are met, visions are realized, and businesses thrive in the digital age.
               </p>
-              <button className="effect effect-1 mt-3">learn more</button>
+              <button onClick={() => window.location.replace("/#modal-contact-form-data")} className="btn btn-hover-1-copy color-1">learn more</button>
             </div>
             <div className="col-lg-6">
               <div className="ms-lg-5 pt-4 mt-lg-0 pt-lg-0">
