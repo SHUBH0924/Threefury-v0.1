@@ -48,8 +48,8 @@
   z-index: 1;
 }
 
-.process-wrapp>.pro-step.midnight {
-  background: #41526b;
+.process-wrapp>.pro-step.green {
+  background: #19c844;
 }
 
 .process-wrapp>.pro-step.blue {
@@ -63,6 +63,11 @@
 .process-wrapp>.pro-step.pink {
   background: #f021b6;
 }
+
+.process-wrapp>.pro-step.midnight {
+  background: #41526b;
+}
+
 
 .pro-step:hover {
   animation: heartBeat 1.6s infinite;
@@ -113,10 +118,7 @@
   position: relative;
 }
 
-/* .facebook:hover{
-background-color: blue;
-} */
-
-.owl-animation{
-  transform: translate3d(-1710px, 0px, 0px); transition: all 1.5s ease 0s; width: 3420px;
+.owlItem{
+width:25%
 }
+

@@ -5,8 +5,6 @@ import 'font-awesome/css/font-awesome.min.css';
 import home from './pages/Home/MyHome';
 import AboutUs from './pages/AboutUs/AboutUs';
 
-
-
 function navbar() {
   return (
     <div className='container'>
