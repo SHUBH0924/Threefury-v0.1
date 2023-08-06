@@ -1,13 +1,19 @@
 .App {
   text-align: center;
 }
-
+.formBox{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 2.5rem;
+}
+.cursorSet{
+  cursor: pointer;
+}
 .style-sec{
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .logo-img{
-  width: 250px;
-  height: 80px;
+  width: 180px;
+  height: 50px;
 }
 
 .App-logo {
@@ -166,11 +172,39 @@
   transition: all .4s ease-in-out;
 }
 
+.btn-hover-1-copy {
+  width: 125px;
+  padding: 0.5rem;
+  border-radius: 50px;
+  margin-left: 1rem;
+  /*font-size: 16px;*/
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  /*margin: 20px;*/
+ /* height: 55px;*/
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  margin-top: -2px ;
+  border-radius: 50px;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
 .btn-hover-1:hover {
   background-position: 100% 0;
   -o-transition: all .4s ease-in-out;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
+}
+.btn-hover-1-copy:hover {
+  background-position: 100% 0;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  color: white;
 }
 
 .btn-hover-1:focus {
@@ -187,6 +221,10 @@
 .btn-hover-1.color-1 {
   background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
     box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+.btn-hover-1-copy.color-1 {
+  background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+  box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
 }
 
 

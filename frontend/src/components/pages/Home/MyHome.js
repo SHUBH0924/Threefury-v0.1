@@ -7,7 +7,8 @@ import AboutUs from "../AboutUs/AboutUs";
 import { faEmber } from "@fortawesome/free-brands-svg-icons";
 import emailjs from "@emailjs/browser";
 import Footer from "../../Footer/Footer"
-import OurProjects from "../../OurProject/OurProject"
+import OurProjects from "../../OurProject/OurProject";
+
 import { text } from "@fortawesome/fontawesome-svg-core";
 
 function home() {
@@ -128,8 +129,11 @@ function home() {
             <h2 class="title mt-2">Lets start your <span class="alt-color js-rotating">project, website</span></h2>
         </div> */}
                   {/* <!--Contact Form--> */}
-                  <form class="contact-form" id="modal-contact-form-data">
-                    <h3 class="heading mb-4">Let's talk about your Business!</h3>
+                  <form class="contact-form formBox" id="modal-contact-form-data">
+                    <h3 class="heading mb-4">Book a free consultation </h3>
+                    <p>
+                    Let's Talk! Our team of experts is ready to hear your vision and craft a custom solution that elevates your online presence
+                    </p>
                     <div class="row">
                       {/* <!--Result--> */}
                       <div class="col-12" id="quote_result"></div>
