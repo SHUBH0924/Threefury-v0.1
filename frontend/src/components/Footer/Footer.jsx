@@ -24,10 +24,11 @@ const Footer = () => {
                <a target="_blank" href="https://www.linkedin.com/company/threefury/?viewAsMember=true"> <LinkedInIcon className='footer-icon'/></a>
                {/* <InstagramIcon className='footer-icon'/>*/}
            
-               <a  target="_blank" href="mailto:threefurypvtltd@gmail.com"> <EmailIcon className='footer-icon'/></a>
+               <a  target="_blank" href="mailto:info@threefury.com"> <EmailIcon className='footer-icon'/></a>
                 </div>
             </div>
         </div>
+        <p>Copyright © 2023 www.threefury.com</p>
     </div>
   )
 }

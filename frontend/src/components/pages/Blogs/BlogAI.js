@@ -52,7 +52,7 @@ That being said, there are opportunities for software engineers to work at OpenA
                             <a href="#">Managment</a>
                         </div>
                     </article>
-                    <div class="contact-form article-comment">
+                    {/* <div class="contact-form article-comment">
                         <h4>Leave a Reply</h4>
                         <form id="contact-form" method="POST">
                             <div class="row">
@@ -78,7 +78,7 @@ That being said, there are opportunities for software engineers to work at OpenA
                                 </div>
                             </div>
                         </form>
-                    </div>
+                    </div> */}
                 </div>
                 <div class="col-lg-4 m-15px-tb blog-aside">
                     {/* <!-- Author --> */}

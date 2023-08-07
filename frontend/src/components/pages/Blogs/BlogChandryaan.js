@@ -44,7 +44,7 @@ function blog1() {
                             <a href="#">Science</a>
                         </div>
                     </article>
-                    <div class="contact-form article-comment">
+                    {/* <div class="contact-form article-comment">
                         <h4>Leave a Reply</h4>
                         <form id="contact-form" method="POST">
                             <div class="row">
@@ -70,7 +70,7 @@ function blog1() {
                                 </div>
                             </div>
                         </form>
-                    </div>
+                    </div> */}
                 </div>
                 <div class="col-lg-4 m-15px-tb blog-aside">
                     {/* <!-- Author --> */}

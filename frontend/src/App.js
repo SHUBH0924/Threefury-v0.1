@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/pages/Home/MyHome";
 import "./App.css";
 import BlogAI from "./components/pages/Blogs/BlogAI";
-import Chandrayaaan from "./components/pages/Blogs/chandryaan"
-import Microservices from "./components/pages/Blogs/microservicesblog"
+import Chandrayaaan from "./components/pages/Blogs/BlogChandryaan"
+import Microservices from "./components/pages/Blogs/BlogMicroservices"
 import ReactWhatsappButton from "react-whatsapp-button";
 
 function App() {
@@ -13,8 +13,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/blogAI" element={<BlogAI />} />
-        <Route path="/chandrayaan" element={<Chandrayaaan />} />
-        <Route path="/microservices" element={<Microservices />} />
+        <Route path="/blogChandrayaan" element={<Chandrayaaan />} />
+        <Route path="/blogMicroservices" element={<Microservices />} />
       </Routes>
       <ReactWhatsappButton
         countryCode="91"

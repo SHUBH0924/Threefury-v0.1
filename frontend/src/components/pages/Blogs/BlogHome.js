@@ -13,12 +13,12 @@ import {useNavigate } from 'react-router-dom';
 function BlogAIHome() {
     const navigate = useNavigate();
     const handleClickAI = () => navigate('/blogAI');
-    const handleClickMicroservice = () => navigate('/microservices');
-    const handleClickChandrayaan = () => navigate('/chandrayaan');
+    const handleClickMicroservice = () => navigate('/blogMicroservices');
+    const handleClickChandrayaan = () => navigate('/blogChandrayaan');
 
   return (
     <>
-        <section className="bg-light" id="blog">
+        <section className="bg-light" style={{marginTop:"8rem"}} id="blog">
     <div className="container">
        {/* <!--Row--> */}
         <div className="row">
