@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import Nav from "../../Nav";
 import Navigation from "../../navbar";
 import "bootstrap/dist/css/bootstrap.css";
 import icon from "../../../assets/contact-us-customer-support-concept-vector_prev_ui.png";
-import BlogAIHome from "../Blogs/BlogAIHome";
+import BlogHome from "../Blogs/BlogHome";
 import AboutUs from "../AboutUs/AboutUs";
 import emailjs from "@emailjs/browser";
 import Footer from "../../Footer/Footer";
@@ -133,26 +134,30 @@ function home() {
   };
 
   return (
-    <>
+    <div style={{overflowX:"hidden"}}>
       <div>
-        <Navigation />
+        <Nav />
+      </div>
+      <div className="just-cont" style={{marginTop:"9rem", margiLeft:"7rem"}}>
+          <h6 className="title-heading"> India's Leading <i><b className="dev-title">Web Design</b></i>, <i><b className="dev-title">Development Company</b></i> and </h6>
+          <h4 className="title-heading" ><i> <b className="dev-title">Digital Solutions Provider</b></i> </h4>
       </div>
       <div id="home" className="content">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-md-10">
+            <div className="col-md-12">
               <div className="row justify-content-center">
                 <div className="col-md-6">
-                  <p>
+                  {/* <p>
                     <h6 className="title-heading"> India's Leading <i><b className="dev-title">Web Design</b></i>, <i><b className="dev-title">Development Company</b></i> and </h6>
-                    <h4 className="title-heading" ><i> <b className="dev-title">Digital Solutions Provider</b></i> </h4>
-                    <img src={icon} alt="Image" class="swing img-fluid ml-6 custom-img" />
-                  </p>
+                    <h4 className="title-heading" ><i> <b className="dev-title">Digital Solutions Provider</b></i> </h4> */}
+                    <img src={icon} alt="Image" className="ms-md-3 swing img-fluid ml-6 custom-img" />
+                  {/* </p> */}
                 </div>
                 <div className="col-md-6 mb-10">
                   {/* <!--Contact Form--> */}
-                  <form class="contact-form formBox" id="modal-contact-form-data">
-                    <h3 class="heading mb-4">Book a free consultation </h3>
+                  <form className="contact-form formBox" id="modal-contact-form-data">
+                    <h3 className="heading mb-4" style={{fontWeight:"700"}}>Book a free consultation </h3>
                     <p>
                     Let's Talk! Our team of experts is ready to hear your vision and craft a custom solution that elevates your online presence
                     </p>
@@ -176,10 +181,10 @@ function home() {
                         </div>
                         <div className="form-group">
                           <PhoneInput
-                            style={{ marginTop: "2.8rem" }}
+                            className="input-phone-number form-control"
                             id="quote_contact"
                             name="userPhone"
-                            placeholder="Enter phone number"
+                            placeholder="Phone number"
                             required=""
                             type="text"
                             defaultCountry="IN"
@@ -290,9 +295,9 @@ function home() {
       </div>
       {<AboutUs />}
       {<OurProjects />}
-      {<BlogAIHome />}
+      {<BlogHome />}
       {<Footer />}
-    </>
+    </div>
   );
 }
 
