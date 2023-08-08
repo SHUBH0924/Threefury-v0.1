@@ -154,7 +154,7 @@ function home() {
                     <img src={icon} alt="Image" className="ms-md-3 swing img-fluid ml-6 custom-img" />
                   {/* </p> */}
                 </div>
-                <div className="col-md-6 mb-10">
+                <div className="col-md-6 mb-19">
                   {/* <!--Contact Form--> */}
                   <form className="contact-form formBox" id="modal-contact-form-data">
                     <h3 className="heading mb-4" style={{fontWeight:"700"}}>Book a free consultation </h3>
